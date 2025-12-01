@@ -1,0 +1,290 @@
+
+---
+
+## 📄 2. Αρχείο: `index.html`
+
+```html
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpha Insurance - Ασφαλιστικά Προϊόντα</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="images/logo.png" alt="Alpha Insurance Logo">
+                <span>Alpha Insurance</span>
+            </a>
+            
+            <div class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home"><i class="fas fa-home"></i> Αρχική</a></li>
+                <li><a href="#products"><i class="fas fa-shield-alt"></i> Προϊόντα</a></li>
+                <li><a href="#about"><i class="fas fa-info-circle"></i> Σχετικά</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> Επικοινωνία</a></li>
+                <li><a href="tel:+302101234567" class="btn-call">
+                    <i class="fas fa-phone"></i> Κάλεσέ μας
+                </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Η Ασφάλεια <span class="highlight">Που Αξίζεις</span></h1>
+                <p>Προστατεύουμε ό,τι σημαντικό έχεις στη ζωή σου με προσιτές λύσεις και εξατομικευμένη εξυπηρέτηση.</p>
+                <div class="hero-buttons">
+                    <a href="#products" class="btn-primary">Δες τα Προϊόντα μας</a>
+                    <a href="#contact" class="btn-secondary">Ζήτησε Προσφορά</a>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <h3>25,000+</h3>
+                    <p>Ευχαριστημένοι Πελάτες</p>
+                </div>
+                <div class="stat">
+                    <h3>98%</h3>
+                    <p>Ικανοποίηση Πελατών</p>
+                </div>
+                <div class="stat">
+                    <h3>24/7</h3>
+                    <p>Υποστήριξη</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Κατηγορίες Προϊόντων</h2>
+            <div class="categories-grid">
+                <div class="category-card" data-category="health">
+                    <img src="images/icon-health.png" alt="Ασφάλεια Υγείας">
+                    <h3>Υγεία</h3>
+                    <p>Πλήρης κάλυψη ιατρικών εξόδων</p>
+                </div>
+                <div class="category-card" data-category="car">
+                    <img src="images/icon-car.png" alt="Ασφάλεια Αυτοκινήτου">
+                    <h3>Αυτοκίνητο</h3>
+                    <p>Υποχρεωτική & Επέκταση</p>
+                </div>
+                <div class="category-card" data-category="home">
+                    <img src="images/icon-home.png" alt="Ασφάλεια Κατοικίας">
+                    <h3>Κατοικία</h3>
+                    <p>Προστασία σπιτιού & περιουσίας</p>
+                </div>
+                <div class="category-card" data-category="life">
+                    <img src="images/icon-life.png" alt="Ασφάλεια Ζωής">
+                    <h3>Ζωή</h3>
+                    <p>Ασφάλεια για το μέλλον</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <h2 class="section-title">Τα Προϊόντα μας</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Όλα</button>
+                <button class="filter-btn" data-filter="health">Υγεία</button>
+                <button class="filter-btn" data-filter="car">Αυτοκίνητο</button>
+                <button class="filter-btn" data-filter="home">Κατοικία</button>
+                <button class="filter-btn" data-filter="life">Ζωή</button>
+            </div>
+            <div class="products-grid" id="productsContainer">
+                <!-- Products loaded dynamically from JSON -->
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Συχνές Ερωτήσεις</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Πόσο γρήγορα εκδίδονται οι ασφαλιστικές πολιτικές;</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Οι περισσότερες ασφαλιστικές πολιτικές εκδίδονται εντός 24 ωρών. Σε ορισμένες περιπτώσεις που απαιτείται επιπλέον τεκμηρίωση, η διαδικασία μπορεί να διαρκέσει έως και 3 εργάσιμες ημέρες.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Ποια είναι η διαδικασία αίτησης αποζημίωσης;</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Μπορείτε να υποβάλετε αίτηση αποζημίωσης μέσω της ηλεκτρονικής μας πλατφόρμας, τηλεφωνικά στο 210 123 4567, ή επισκεπτόμενοι ένα από τα γραφεία μας. Απαιτείται η συμπλήρωση της σχετικής φόρμας και η προσκόμιση των απαραίτητων δικαιολογητικών.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Πώς μπορώ να αλλάξω τα στοιχεία της ασφάλισής μου;</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Οι αλλαγές στα στοιχεία της ασφάλισης μπορούν να γίνουν μέσω του λογαριασμού σας στην ηλεκτρονική πλατφόρμα, μέσω email στο info@alphainsurance.gr ή με επίσκεψη σε γραφείο. Σημαντικές αλλαγές ενδέχεται να απαιτούν την υποβολή νέας αίτησης.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h2>Επικοινωνήστε μαζί μας</h2>
+                    <p>Είμαστε διαθέσιμοι για οποιαδήποτε ερώτηση ή διευκρίνηση.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Διεύθυνση</h4>
+                                <p>Οδός Παραδείσου 123, Αθήνα 115 25</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Τηλέφωνο</h4>
+                                <p>210 123 4567</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>info@alphainsurance.gr</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Ώρες Λειτουργίας</h4>
+                                <p>Δευ-Παρ: 09:00 - 18:00<br>Σάββατο: 10:00 - 14:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Ονοματεπώνυμο *" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Email *" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" placeholder="Τηλέφωνο">
+                    </div>
+                    <div class="form-group">
+                        <select id="productInterest">
+                            <option value="">Ενδιαφέρομαι για...</option>
+                            <option value="health">Ασφάλεια Υγείας</option>
+                            <option value="car">Ασφάλεια Αυτοκινήτου</option>
+                            <option value="home">Ασφάλεια Κατοικίας</option>
+                            <option value="life">Ασφάλεια Ζωής</option>
+                            <option value="other">Άλλο</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" rows="5" placeholder="Το μήνυμά σας..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <div class="checkbox">
+                            <input type="checkbox" id="consent" required>
+                            <label for="consent">Συμφωνώ με την επεξεργασία των δεδομένων μου σύμφωνα με την Πολιτική Απορρήτου</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-primary">Αποστολή Μηνύματος</button>
+                    <div class="form-message" id="formMessage"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <a href="#" class="logo">
+                        <img src="images/logo.png" alt="Alpha Insurance Logo">
+                        <span>Alpha Insurance</span>
+                    </a>
+                    <p>Προστατεύοντας τα όνειρά σας από το 1995. Αξιοπιστία, Εμπιστοσύνη, Ασφάλεια.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Γρήγοροι Σύνδεσμοι</h3>
+                    <ul>
+                        <li><a href="#home">Αρχική</a></li>
+                        <li><a href="#products">Προϊόντα</a></li>
+                        <li><a href="#about">Σχετικά</a></li>
+                        <li><a href="#contact">Επικοινωνία</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Υπηρεσίες</h3>
+                    <ul>
+                        <li><a href="#products">Ασφάλεια Υγείας</a></li>
+                        <li><a href="#products">Ασφάλεια Αυτοκινήτου</a></li>
+                        <li><a href="#products">Ασφάλεια Κατοικίας</a></li>
+                        <li><a href="#products">Ασφάλεια Ζωής</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Νέα & Ενημερώσεις</h3>
+                    <p>Εγγραφείτε στο newsletter μας για ενημερώσεις και προσφορές.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Το email σας">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Alpha Insurance. Με επιφύλαξη παντός δικαιώματος.</p>
+                <div class="footer-links">
+                    <a href="#">Πολιτική Απορρήτου</a>
+                    <a href="#">Όροι Χρήσης</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="script.js"></script>
+</body>
+</html>

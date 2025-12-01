@@ -1,0 +1,8 @@
+{
+  "id": 5,
+  "name": "Νέο Προϊόν",
+  "category": "health",
+  "price": "€25/μήνα",
+  "features": ["Feature 1", "Feature 2"],
+  "description": "Περιγραφή προϊόντος"
+}

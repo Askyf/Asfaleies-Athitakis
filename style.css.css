@@ -1,0 +1,4 @@
+/* Mobile First Approach */
+@media (min-width: 768px) { /* Tablet */ }
+@media (min-width: 1024px) { /* Desktop */ }
+@media (min-width: 1440px) { /* Large Desktop */ }
